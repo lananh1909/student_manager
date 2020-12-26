@@ -53,18 +53,14 @@ public class AddStudent extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(editDiaChi.getText().toString().equals("") || editEmail.getText().toString().equals("") || editHoTen.getText().toString().equals("") || editMssv.getText().toString().equals("") || editDate.getText().toString().equals("")){
-                    Toast toast = new Toast(AddStudent.this);
-                    toast.setText("Bạn chưa điền đầy đủ thông tin!");
-                    toast.show();
+                    Toast.makeText( getApplicationContext(),"Bạn chưa điền đầy đủ thông tin!", Toast.LENGTH_LONG).show();
                 } else {
                     String dataPath = getFilesDir() + "/student_data";
                     db = SQLiteDatabase.openDatabase(dataPath, null, SQLiteDatabase.OPEN_READWRITE);
                     String sql = String.format("insert into sinhvien(mssv, hoten, ngaysinh, email, diachi) " +
                             "values('%s', '%s', '%s', '%s', '%s')", editMssv.getText(), editHoTen.getText(), editDate.getText(), editEmail.getText(), editDiaChi.getText());
                     db.execSQL(sql);
-                    Toast toast = new Toast(AddStudent.this);
-                    toast.setText("Thêm thành công!");
-                    toast.show();
+                    Toast.makeText( getApplicationContext(),"Thêm thành công!", Toast.LENGTH_LONG).show();
                     editMssv.setText("");
                     editDate.setText("");
                     editDiaChi.setText("");

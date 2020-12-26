@@ -16,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -64,7 +65,13 @@ public class UpdateStudent extends AppCompatActivity {
         try{
             d1 = sdf3.parse(date);
 
-        }catch (Exception e){ e.printStackTrace(); }
+        }catch (Exception e){
+            try {
+                d1 = dateFormat.parse(date);
+            } catch (ParseException parseException) {
+                parseException.printStackTrace();
+            }
+        }
 
         editNgaySinh.setText(dateFormat.format(d1));
 
@@ -78,9 +85,7 @@ public class UpdateStudent extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(editDiacChi.getText().toString().equals("") || editEmail.getText().toString().equals("") || editHoTen.getText().toString().equals("") || editMssv.getText().toString().equals("") || editNgaySinh.getText().toString().equals("")){
-                    Toast toast = new Toast(UpdateStudent.this);
-                    toast.setText("Bạn chưa điền đầy đủ thông tin!");
-                    toast.show();
+                    Toast.makeText( getApplicationContext(),"Bạn chưa điền đầy đủ thông tin!", Toast.LENGTH_LONG).show();
                 } else {
                     String dataPath = getFilesDir() + "/student_data";
                     db = SQLiteDatabase.openDatabase(dataPath, null, SQLiteDatabase.OPEN_READWRITE);
