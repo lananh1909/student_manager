@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="Thông tin sinh viên"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/ms_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MSSV:"
+            android:textSize="24sp"/>
+        <TextView
+            android:id="@+id/edit_mssv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/ms_field"
+            android:textSize="24sp"
+            android:layout_marginLeft="10dp"
+            android:text="20183864"/>
+        <TextView
+            android:id="@+id/name_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Họ tên: "
+            android:layout_below="@id/edit_mssv"
+            android:textSize="24sp"/>
+        <TextView
+            android:id="@+id/edit_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nguyễn Lan Anh"
+            android:textSize="24sp"
+            android:layout_toRightOf="@id/name_field"
+            android:layout_below="@id/edit_mssv"
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:id="@+id/birth_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ngày sinh: "
+            android:layout_below="@id/edit_name"
+            android:textSize="24sp"/>
+        <TextView
+            android:id="@+id/edit_birthday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="19/09/2000"
+            android:textSize="24sp"
+            android:layout_toRightOf="@id/birth_field"
+            android:layout_below="@id/edit_name"
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:id="@+id/email_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email: "
+            android:layout_below="@id/edit_birthday"
+            android:textSize="24sp"/>
+        <TextView
+            android:id="@+id/edit_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="anh.nl183864@sis.hust.edu.vn"
+            android:textSize="24sp"
+            android:layout_toRightOf="@id/email_field"
+            android:layout_below="@id/edit_birthday"
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:id="@+id/address_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Địa chỉ: "
+            android:layout_below="@id/edit_email"
+            android:textSize="24sp"/>
+        <TextView
+            android:id="@+id/edit_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hà Nội"
+            android:textSize="24sp"
+            android:layout_toRightOf="@id/address_field"
+            android:layout_below="@id/edit_email"
+            android:layout_marginLeft="10dp"/>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

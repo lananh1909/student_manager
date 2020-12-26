@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="Sửa thông tin sinh viên"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/ms_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/birth_text1"
+            android:text="MSSV:"
+            android:textSize="24sp"/>
+        <EditText
+            android:id="@+id/edit_textmssv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/ms_text1"
+            android:textSize="24sp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:hint="mssv"/>
+        <TextView
+            android:id="@+id/name_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Họ tên: "
+            android:layout_alignRight="@id/birth_text1"
+            android:layout_below="@id/edit_textmssv"
+            android:textSize="24sp"/>
+        <EditText
+            android:id="@+id/edit_textname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:hint="họ và tên"
+            android:textSize="24sp"
+            android:layout_toRightOf="@id/name_text1"
+            android:layout_below="@id/edit_textmssv"
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:id="@+id/birth_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ngày sinh: "
+            android:layout_below="@id/edit_textname"
+            android:textSize="24sp"/>
+        <EditText
+            android:id="@+id/edit_textbirthday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="ngày sinh"
+            android:textSize="24sp"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@id/birth_text1"
+            android:layout_below="@id/edit_textname"
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:id="@+id/email_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/birth_text1"
+            android:text="Email: "
+            android:layout_below="@id/edit_textbirthday"
+            android:textSize="24sp"/>
+        <EditText
+            android:id="@+id/edit_textemail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="email"
+            android:layout_alignParentRight="true"
+            android:textSize="24sp"
+            android:layout_toRightOf="@id/email_text1"
+            android:layout_below="@id/edit_textbirthday"
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:id="@+id/address_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Địa chỉ: "
+            android:layout_alignRight="@id/birth_text1"
+            android:layout_below="@id/edit_textemail"
+            android:textSize="24sp"/>
+        <EditText
+            android:id="@+id/edit_textaddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="địa chỉ"
+            android:layout_alignParentRight="true"
+            android:textSize="24sp"
+            android:layout_toRightOf="@id/address_text1"
+            android:layout_below="@id/edit_textemail"
+            android:layout_marginLeft="10dp"/>
+
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UPDATE"
+            android:layout_below="@id/edit_textaddress"
+            android:layout_alignRight="@id/edit_textaddress"/>
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CANCEL"
+            android:layout_toLeftOf="@id/btn_add"
+            android:layout_below="@id/edit_textaddress"
+            android:layout_marginRight="10dp"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
